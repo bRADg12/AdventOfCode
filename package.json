@@ -1,11 +1,12 @@
 {
-  "name": "AdventOfCode",
+  "name": "advent-of-code",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "debug": "node --debug-brk --inspect ./node_modules/jest/bin/jest -i"
   },
   "repository": {
     "type": "git",
