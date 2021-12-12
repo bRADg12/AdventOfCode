@@ -1,3 +1,4 @@
+import { arrayBuffer } from "stream/consumers";
 export function binaryStringToInt(str: string): number {
   let num = 0;
   let ctr = 0;
@@ -7,7 +8,6 @@ export function binaryStringToInt(str: string): number {
   }
   return num;
 }
-
 export function matchFirstX(str1: string, str2: string, x: number): boolean {
   let flag = true;
   for (let i = 0; i <= x; i++) {
@@ -16,4 +16,14 @@ export function matchFirstX(str1: string, str2: string, x: number): boolean {
     }
   }
   return flag;
+}
+export function sum(arr: number[]) {
+  let ctr = 0;
+  for (let i = 0; i < arr.length; i++) {
+    ctr += arr[i];
+  }
+  return ctr;
+}
+export function range(min: number, max: number): number[] {
+  return [...Array(max - min + 1).keys()].map(i => i + min);
 }
